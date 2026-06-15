@@ -1,0 +1,5 @@
+python-telegram-bot[job-queue]>=20.0,<22.0
+SQLAlchemy>=2.0
+python-dateutil>=2.8
+dateparser>=1.2.0
+httpx>=0.27

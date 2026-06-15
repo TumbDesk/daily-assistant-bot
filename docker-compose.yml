@@ -1,0 +1,12 @@
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: sqlite:////app/data/bot.db
+      TZ: Europe/Berlin
+    volumes:
+      - ./data:/app/data
+      - ./locales:/app/locales
