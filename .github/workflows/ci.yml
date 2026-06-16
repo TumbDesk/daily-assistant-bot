@@ -23,5 +23,5 @@ jobs:
       - name: Run tests
         env:
           ADMIN_ID: "9001"
-          DATABASE_URL: sqlite:///:memory:
+          DATABASE_URL: "sqlite:///:memory:"
         run: pytest
