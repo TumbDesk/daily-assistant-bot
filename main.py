@@ -44,8 +44,8 @@ def _parse_admin_id() -> int:
         admin_id = int(raw)
     except ValueError:
         logger.error(
-            "ADMIN_ID muss eine numerische Telegram-User-ID sein (z.B. von @userinfobot), "
-            "erhalten: %r",
+            "ADMIN_ID must be a numeric Telegram user ID (use /myid in a private chat), "
+            "got: %r",
             raw,
         )
         sys.exit(1)

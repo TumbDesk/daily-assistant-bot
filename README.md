@@ -20,7 +20,7 @@ A private Telegram bot for personal scheduling: calendar events, daily agenda, b
 
 - Python 3.12
 - Telegram bot token from [BotFather](https://t.me/BotFather)
-- Your Telegram user ID (e.g. from [@userinfobot](https://t.me/userinfobot))
+- Your Telegram user ID for `ADMIN_ID` (discover via `/myid` in a private chat — see First run)
 
 ## Quick start (local)
 
@@ -60,10 +60,11 @@ Placeholder values from `.env.example` are rejected at startup.
 
 ## First run
 
-1. Set `ADMIN_ID` to your Telegram user ID before starting the bot.
-2. Message the bot in a **private chat** with `/start`.
-3. Add other users with `/allow <Telegram-ID> <Name>` (admin only).
-4. Optional: set a home location with `/home <city>` for weather features.
+1. Copy `.env.example` to `.env` and set `BOT_TOKEN`.
+2. If you don't know your Telegram ID yet: set a temporary `ADMIN_ID` (e.g. `1`), start the bot, send `/myid` in a **private chat**, then set `ADMIN_ID` to the returned ID and restart the bot.
+3. Message the bot in a **private chat** with `/start` (as bootstrap admin).
+4. Other users send `/myid` in private chat; add them with `/allow <Telegram-ID> <Name>` (admin only).
+5. Optional: set a home location with `/home <city>` for weather features.
 
 The bot is designed for a **closed user group**, not public multi-tenant use.
 
